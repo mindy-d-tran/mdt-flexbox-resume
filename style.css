@@ -28,7 +28,7 @@ main {
 
 .main-info h2{
   border-radius: 1em;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #FEF2F4;
   color: #D14D72;
 }
@@ -53,7 +53,7 @@ img {
 
 /* gets rid of padding for p in the contact box */
 #box-2 p {
-  margin: 0em;
+  margin: 0.25em;
 }
 
 /* from w3 school https://www.w3schools.com/howto/howto_css_circles.asp 
@@ -138,14 +138,15 @@ start of circle style*/
 }
 
 .subtitle {
+  width:max-content;
   margin: 2% 0%;
-  color: #FEF2F4;
+  padding: 5%;
+  border-bottom: 2px solid #FFABAB;
 }
 /* end of styling header and subtitle */
 
 #box-2-1 {
   font-weight: bolder;
-  color: #FEF2F4;
 }
 /* flexbox styling */
 
@@ -158,7 +159,7 @@ start of circle style*/
   border-radius: 5vw;
   overflow: hidden;
   background-color: #FCC8D1;
-  padding: 2em;
+  padding: 2em 4em;
 }
 
 .container {
@@ -176,9 +177,8 @@ main.container {
 }
 
 #box-2 {
-  align-items: center;
   align-content: space-evenly;
-  gap: 10px;
+  gap: 1em;
 }
 
 #box-3 {
@@ -218,6 +218,10 @@ a:hover {
 
 @media screen and (max-width: 800px) {
 
+  header {
+    margin-bottom: 1vh;
+  }
+
   main{
     order: 1;
   }
@@ -230,7 +234,21 @@ a:hover {
     display: none;
   }
 
+  .company-title-time{
+    flex-direction: column;
+  }
+  #main-container {
+    padding: 2em 1em;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
   #box-2{
     flex-wrap: nowrap;
+  }
+  #box-3{
+    width: inherit;
+    align-content: center;
   }
 }
