@@ -1,0 +1,236 @@
+/* general style */
+html {
+  background-color: #FEF2F4;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #D14D72;
+}
+
+/* more specific styling */
+body {
+  padding: 2% 4%;
+  color: #D14D72;
+}
+
+header {
+  justify-content: space-between;
+  row-gap: 2%;
+  margin-bottom: 2vw;
+
+}
+
+main {
+  flex-basis: 70%;
+}
+
+.main-info h2{
+  border-radius: 1em;
+  overflow: hidden;
+  background-color: #FEF2F4;
+  color: #D14D72;
+}
+
+aside {
+  flex-direction: column;
+  flex-basis: 25%;
+  justify-content: space-between;
+}
+
+aside section[class*="skill"]{
+  height: 30%;
+}
+
+img {
+  width: 150px; 
+  height: 150px;
+  border: 0.75em solid #FEF2F4;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* gets rid of padding for p in the contact box */
+#box-2 p {
+  margin: 0em;
+}
+
+/* from w3 school https://www.w3schools.com/howto/howto_css_circles.asp 
+start of circle style*/
+.circle {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #D14D72;
+  /* display: inline-block; */
+  margin: 0% 0.5%;
+}
+
+#lang-1 span:nth-last-child(-n + 1){
+  background-color:#FEF2F4
+}
+
+#lang-2 span:nth-last-child(-n + 4){
+  background-color:#FEF2F4
+}
+
+#lang-3 span:nth-last-child(-n + 2){
+  background-color:#FEF2F4
+}
+/* end of circle style */
+
+/* percent bar style */
+.percent-bar {
+  width: inherit;
+  height: 1.5em;
+  background-color: #FEF2F4;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.percentage-bar{
+  height: inherit;
+  border-radius: inherit;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #D14D72;
+}
+
+.percentage-bar p {
+  align-self: center;
+  margin: 0em 0.25em;
+  color: #FEF2F4;
+}
+
+#bar-1 {
+  width: 50%;
+}
+
+#bar-2 {
+  width: 20%;
+}
+
+#bar-3 {
+  width: 90%;
+}
+/* end of percent bar style */
+
+.company-title-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #D14D72;
+}
+
+.box-skill-list ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.experience {
+  border-bottom: 1px solid #FFABAB;
+}
+
+/* start of styling header and subtitle */
+.header-subtitle > h1, .header-subtitle > h2, .header-subtitle > h3 {
+  margin-bottom: 0.5em;
+}
+
+.subtitle {
+  margin: 2% 0%;
+  color: #FEF2F4;
+}
+/* end of styling header and subtitle */
+
+#box-2-1 {
+  font-weight: bolder;
+  color: #FEF2F4;
+}
+/* flexbox styling */
+
+/* styling parent root container */
+#main-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 2%;
+  border-radius: 5vw;
+  overflow: hidden;
+  background-color: #FCC8D1;
+  padding: 2em;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main.container {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#box-1{
+  column-gap: 20px;
+}
+
+#box-2 {
+  align-items: center;
+  align-content: space-evenly;
+  gap: 10px;
+}
+
+#box-3 {
+  flex-grow: 1;
+  border-bottom: 3px solid #FFABAB;
+}
+
+.box-lang {
+  margin: 5px 0;
+  display: flex;
+  align-items: center
+} 
+
+/* psuedo class */
+.experience:last-of-type {
+  border: 0;
+}
+
+.box-lang span:nth-child(2){
+  margin-left: 1vh;
+}
+
+.box-skill-list ul li::before {
+  content: "♥ ";
+  font-size: 1em;
+  color: #FEF2F4;
+}
+
+.main-info h2::before {
+  content: "♥ ";
+  padding-left: 0.5em;
+}
+
+a:hover {
+  color:#FEF2F4
+}
+
+@media screen and (max-width: 800px) {
+
+  main{
+    order: 1;
+  }
+  
+  main, aside {
+    flex-basis: 100%;
+  }
+
+  img {
+    display: none;
+  }
+
+  #box-2{
+    flex-wrap: nowrap;
+  }
+}
