@@ -145,6 +145,10 @@ start of circle style*/
 }
 /* end of styling header and subtitle */
 
+.header-subtitle + p{
+  font-style: italic;
+}
+
 #box-2-1 {
   font-weight: bolder;
 }
